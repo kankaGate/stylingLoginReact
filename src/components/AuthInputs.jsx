@@ -30,6 +30,8 @@ export default function AuthInputs() {
   const emailNotValid = submitted && !enteredEmail.includes('@');
   const passwordNotValid = submitted && enteredPassword.trim().length < 6;
 
+    // console.log('emailNotValid : ',emailNotValid);
+    // console.log('passwordNotValid : ',passwordNotValid);
   return (
     <div id="auth-inputs">
       <ControlContainer>

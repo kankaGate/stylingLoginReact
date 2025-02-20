@@ -7,7 +7,7 @@ const Label = styled.label`
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: ${($invalid) => $invalid ? '#f87171' : '#6b7280'};
+  color: ${({$invalid}) => $invalid ? '#f87171' : '#6b7280'};
 `
 
 const Input = styled.input`
@@ -21,9 +21,9 @@ const Input = styled.input`
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   `;
 
-export default function styledInput({ label, invalid, ...props }) {
+export default function styledInput({ label, $invalid, ...props }) {
     return <p>
-        <Label $invalid={invalid}>{label}</Label>
-        <Input $invalid={invalid} {...props} />
+        <Label $invalid={$invalid}>{label}</Label>
+        <Input $invalid={$invalid} {...props} />
     </p>
 }
